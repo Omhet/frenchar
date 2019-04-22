@@ -45,7 +45,6 @@ export function activate(context: vscode.ExtensionContext) {
 		const word = doc.getText(range);
 
 		if (editor && word) {
-			vscode.window.showInformationMessage('Found one');
 			const replace = wordMap[word];
 			if (replace) {
 				editor.edit(editBuilder => {
@@ -54,15 +53,6 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 		}
 	});
-
-
-	// let disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
-
-	// 	vscode.window.showInformationMessage('Hello VS!');
-	// 	French.replaceLetters();
-	// });
-
-	// context.subscriptions.push(disposable);
 }
 
 
